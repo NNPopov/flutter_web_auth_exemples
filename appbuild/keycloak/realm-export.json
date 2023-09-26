@@ -1,7 +1,7 @@
 {
   "id": "468f4c4f-3997-42e0-b226-5f65591c0464",
-  "realm": "come-and-watch",
-  "displayName": "come-and-watch",
+  "realm": "keycloakflows",
+  "displayName": "keycloakflows",
   "displayNameHtml": "",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
@@ -49,7 +49,7 @@
     "realm": [
       {
         "id": "b28c345d-a44f-465c-9a8b-984a59cc64e1",
-        "name": "default-roles-come-and-watch",
+        "name": "default-keycloakflows",
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
@@ -301,8 +301,8 @@
         }
       ],
       "security-admin-console": [],
+      "keycloakcodenopkce": [],
       "admin-cli": [],
-      "comeandwatchpkce": [],
       "account-console": [],
       "broker": [
         {
@@ -408,7 +408,7 @@
   "groups": [],
   "defaultRole": {
     "id": "b28c345d-a44f-465c-9a8b-984a59cc64e1",
-    "name": "default-roles-come-and-watch",
+    "name": "default-keycloakflows",
     "description": "${role_default-roles}",
     "composite": true,
     "clientRole": false,
@@ -425,9 +425,9 @@
   "otpPolicyPeriod": 30,
   "otpPolicyCodeReusable": false,
   "otpSupportedApplications": [
-    "totpAppMicrosoftAuthenticatorName",
     "totpAppFreeOTPName",
-    "totpAppGoogleName"
+    "totpAppGoogleName",
+    "totpAppMicrosoftAuthenticatorName"
   ],
   "webAuthnPolicyRpEntityName": "keycloak",
   "webAuthnPolicySignatureAlgorithms": [
@@ -478,13 +478,13 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/come-and-watch/account/",
+      "baseUrl": "/realms/keycloakflows/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/come-and-watch/account/*"
+        "/realms/keycloakflows/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -522,13 +522,13 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/come-and-watch/account/",
+      "baseUrl": "/realms/keycloakflows/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/come-and-watch/account/*"
+        "/realms/keycloakflows/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -654,19 +654,19 @@
     },
     {
       "id": "413c9e24-a777-4394-a095-2493fcba2b8c",
-      "clientId": "comeandwatchpkce",
-      "name": "comeandwatchpkce",
+      "clientId": "keycloakcodenopkce",
+      "name": "KeycloakCodeNoPkce",
       "description": "",
       "rootUrl": "",
       "adminUrl": "",
-      "baseUrl": "https://localhost:5553/realms/come-and-watch/account",
+      "baseUrl": "",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "https://localhost:5553/swagger/oauth2-redirect.html",
-        "https://localhost:5553/oauth2-redirect.html"
+        "https://localhost:5553/oauth2-redirect.html",
+        "http://localhost:54053/oauth2-redirect.html"
       ],
       "webOrigins": [
         "*"
@@ -805,13 +805,13 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/come-and-watch/console/",
+      "baseUrl": "/admin/keycloakflows/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/admin/come-and-watch/console/*"
+        "/admin/keycloakflows/console/*"
       ],
       "webOrigins": [
         "+"
@@ -1528,14 +1528,6 @@
             "true"
           ]
         }
-      }
-    ],
-    "org.keycloak.userprofile.UserProfileProvider": [
-      {
-        "id": "48174a81-dc53-4366-b957-c50935473fc0",
-        "providerId": "declarative-user-profile",
-        "subComponents": {},
-        "config": {}
       }
     ],
     "org.keycloak.keys.KeyProvider": [

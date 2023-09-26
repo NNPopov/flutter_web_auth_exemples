@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 import 'package:jwt_decode/jwt_decode.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:http/http.dart' as http;
 
 import 'flutter_web_auth_2_example.dart';
 

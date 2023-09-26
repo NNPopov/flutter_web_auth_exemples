@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 envPath='usr/share/nginx/html/assets' 
 echo $envPath
 if [ -n "$TARGET_ENV" ]; then
